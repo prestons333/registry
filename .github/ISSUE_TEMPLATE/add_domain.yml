@@ -46,7 +46,7 @@ body:
     attributes:
       label: Does your record need a TXT record as well?
       description: If so, enter it below. If not, leave it blank.
-      placeholder: ex
+      placeholder: ex. site-verify=73520nc038x40m230492
     validations:
       required: false
 
