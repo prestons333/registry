@@ -2,7 +2,7 @@ name: Handle GitHub Issues
 
 on:
   issues:
-    types: [opened]
+    types: [labeled]
 
 jobs:
   handle-issue:
@@ -16,3 +16,8 @@ jobs:
         body: ${{ toJson(github.event.issue) }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Comment on issue
+      uses: peter-evans/create-issue-comment@v1.4.1
+      with:
+        issue-number: ${{ github.event.issue.number }}
+        body: 'Your subdomain has been accepted, and is now being added to our DNS system. Thanks for using SparkDNS!'
