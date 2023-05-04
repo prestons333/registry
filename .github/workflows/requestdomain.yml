@@ -5,7 +5,8 @@ on:
     types: [labeled]
 
 jobs:
-  handle-issue:
+  add-domain:
+    if: github.event.label.name == 'add domain'
     runs-on: ubuntu-latest
     steps:
     - name: Deploy Stage
