@@ -41,6 +41,15 @@ body:
     validations:
       required: true
 
+  - type: input
+    id: txt
+    attributes:
+      label: Does your record need a TXT record as well?
+      description: If so, enter it below. If not, leave it blank.
+      placeholder: ex
+    validations:
+      required: false
+
   - type: checkboxes
     id: agree
     attributes:
