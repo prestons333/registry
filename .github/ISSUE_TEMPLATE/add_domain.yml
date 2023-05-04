@@ -1,14 +1,14 @@
-name: Register domain
+name: Register a domain
 description: Register a new subdomain
-title: "[DOMAIN] <title>"
-labels: ["new domain"]
+title: "[DOMAIN]: "
+labels: ["register domain"]
 assignees:
   - proudparrot2
 body:
   - type: markdown
     attributes:
       value: |
-        "Please enter your chosen domain as the issue's title, after \"[DOMAIN]\"."
+        Please enter your chosen domain as the issue's title, after "[DOMAIN]".
   - type: dropdown
     id: domain
     attributes:
@@ -37,14 +37,7 @@ body:
         - TXT 
     validations:
       required: true
-- type: input
-    id: name
-    attributes:
-      label: Record name
-      description: What's the record's value? This is what you want the subdomain to be.
-      placeholder: ex. myfirstproject
-    validations:
-      required: true
+
   - type: input
     id: value
     attributes:
