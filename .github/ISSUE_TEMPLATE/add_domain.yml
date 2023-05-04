@@ -37,7 +37,14 @@ body:
         - TXT 
     validations:
       required: true
-
+- type: input
+    id: name
+    attributes:
+      label: Record name
+      description: What's the record's value? This is what you want the subdomain to be.
+      placeholder: ex. myfirstproject
+    validations:
+      required: true
   - type: input
     id: value
     attributes:
