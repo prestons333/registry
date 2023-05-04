@@ -8,6 +8,10 @@ jobs:
   handle-issue:
     runs-on: ubuntu-latest
     steps:
+    
+    - name: Issue Forms Body Parser
+      id: parse
+      uses: zentered/issue-forms-body-parser@v2.0.0
         
     - name: Deploy Stage
       uses: fjogeleit/http-request-action@v1
@@ -15,4 +19,4 @@ jobs:
         url: 'https://sparkdns-api.parrotdev.repl.co/requestdomain'
         method: 'POST'
         customHeaders: '{"Content-Type": "application/json"}'
-        data: ${{ toJson(github.event.issue) }}
+        data: ${{ toJSON(steps.parse.outputs.data) }}
