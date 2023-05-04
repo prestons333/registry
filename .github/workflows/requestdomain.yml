@@ -8,11 +8,11 @@ jobs:
   handle-issue:
     runs-on: ubuntu-latest
     steps:
-    - name: Send data to Node.js API
-      uses: actions/http-request@v2
+        
+    - name: Deploy Stage
+      uses: fjogeleit/http-request-action@v1
       with:
         url: 'https://sparkdns-api.parrotdev.repl.co/requestdomain'
-        method: POST
-        body: ${{ toJson(github.event.issue) }}
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        method: 'POST'
+        customHeaders: '{"Content-Type": "application/json"}'
+        data: '${{ toJson(github.event.issue) }'
