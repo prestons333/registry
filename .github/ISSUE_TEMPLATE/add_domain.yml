@@ -18,6 +18,12 @@ body:
         - isreallycool.lol 
         - mathlearning.tech 
         - sorinsurance.org 
+        - artclass.site
+        - hotglue.click
+        - englishpapers.online
+        - ixl.plus
+        - sciencesimplified.pro
+        - msg.boats
     validations:
       required: true
   - type: dropdown
