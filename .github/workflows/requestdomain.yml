@@ -1,0 +1,18 @@
+name: Handle GitHub Issues
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  handle-issue:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Send data to Node.js API
+      uses: actions/http-request@v2
+      with:
+        url: 'https://sparkdns-api.parrotdev.repl.co/requestdomain'
+        method: POST
+        body: ${{ toJson(github.event.issue) }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
