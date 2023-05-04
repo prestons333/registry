@@ -1,0 +1,60 @@
+name: Register a domain
+description: Register a new subdomain
+title: "[DOMAIN]: "
+labels: ["register domain"]
+assignees:
+  - proudparrot2
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If you have any questions while filling out this form, ask in our Discussions tab.
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domain
+      description: What domain do you want to use?
+      options:
+        - artclass.site 
+        - mathlearning.tech 
+        - sorinsurance.org 
+        - mathstudy.lol 
+        - friedbeef.buzz 
+        - hotglue.click 
+        - msg.boats 
+        - nailgun.click 
+        - mathstudy.lol
+        - sciencesimplified.pro
+        - englishpapers.online
+        - isreallycool.lol
+    validations:
+      required: true
+  - type: dropdown
+    id: record
+    attributes:
+      label: Record type
+      description: What is the record's type?
+      options:
+        - A 
+        - CNAME 
+        - TXT 
+    validations:
+      required: true
+
+  - type: input
+    id: value
+    attributes:
+      label: Record value
+      description: What's the record's value?
+      placeholder: ex. google.com
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: agree
+    attributes:
+      label: Code of Conduct
+      description: By submitting this record, you agree to our [Registry agreements](https://github.com/sparkdns/registry/blob/main/AGREEMENTS.md)
+      options:
+        - label: I agree to follow the Registry agreements
+          required: true
