@@ -15,18 +15,9 @@ body:
       label: Domain
       description: What domain do you want to use?
       options:
-        - artclass.site 
+        - isreallycool.lol 
         - mathlearning.tech 
         - sorinsurance.org 
-        - mathstudy.lol 
-        - friedbeef.buzz 
-        - hotglue.click 
-        - msg.boats 
-        - nailgun.click 
-        - mathstudy.lol
-        - sciencesimplified.pro
-        - englishpapers.online
-        - isreallycool.lol
     validations:
       required: true
   - type: dropdown
