@@ -1,4 +1,4 @@
-name: Register a domain
+name: Register a subdomain
 description: Register a new subdomain
 title: "[DOMAIN]: "
 labels: ["register domain"]
