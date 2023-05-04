@@ -23,4 +23,4 @@ There are several benefits to using SparkDNS:
 - It's flexible. You can create any subdomain you want, as long as it is available.
 
 ## Have any questions?
-haha that sucks lmao
+Ask your question in our Discussions tab!
