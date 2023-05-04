@@ -46,6 +46,15 @@ body:
       placeholder: ex. google.com
     validations:
       required: true
+      
+  - type: input
+    id: name
+    attributes:
+      label: Record name
+      description: What's the record's name? This is what the subdomain will be.
+      placeholder: ex. myfirstproject will be myfirstproject.domain.com
+    validations:
+      required: true
 
   - type: input
     id: txt
