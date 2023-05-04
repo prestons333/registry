@@ -1,7 +1,7 @@
-name: "Register a subdomain"
-description: "Register a new subdomain"
-title: "[DOMAIN]: "
-labels: ["register domain"]
+name: Register domain
+description: Register a new subdomain
+title: "[DOMAIN] <title>"
+labels: ["new domain"]
 assignees:
   - proudparrot2
 body:
