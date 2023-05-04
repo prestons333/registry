@@ -1,5 +1,5 @@
 name: Register a domain
-description: Register a new subdomain
+description: Please enter your chosen domain after [DOMAIN] in the issue's title
 title: "[DOMAIN]: "
 labels: ["register domain"]
 assignees:
