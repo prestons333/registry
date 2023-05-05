@@ -15,4 +15,4 @@ jobs:
         url: 'https://sparkdns-api.parrotdev.repl.co/requestdomain'
         method: 'POST'
         customHeaders: '{"Content-Type": "application/json"}'
-        data: '{ "authkey": "${{ secrets.AUTHKEY }}", "data": ${{ toJson(github.event.issue) }}'
+        data: ${{ toJson(github.event.issue) }}
