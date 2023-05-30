@@ -62,7 +62,7 @@ body:
       label: Cloudflare Proxy
       description: Do you want your DNS record to be proxied by Cloudflare?
       options:
-        - label: Yes
+        - label: "Yes"
           required: false
 
   - type: checkboxes
