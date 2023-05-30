@@ -56,14 +56,14 @@ body:
     validations:
       required: true
 
-  - type: input
-    id: txt
+  - type: checkboxes
+    id: proxied
     attributes:
-      label: Does your record need a TXT record as well?
-      description: If so, enter it below. If not, leave it blank.
-      placeholder: ex. site-verify=73520nc038x40m230492
-    validations:
-      required: false
+      label: Cloudflare Proxy
+      description: Do you want your DNS record to be proxied by Cloudflare?
+      options:
+        - label: Yes
+          required: false
 
   - type: checkboxes
     id: agree
@@ -73,3 +73,5 @@ body:
       options:
         - label: I agree to follow the Registry agreements
           required: true
+          
+  
