@@ -10,9 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Deploy Stage
+      id: request
       uses: fjogeleit/http-request-action@v1
       with:
         url: 'https://sparkdns-api.parrotdev.repl.co/requestdomain'
         method: 'POST'
         customHeaders: '{"Content-Type": "application/json", "Authorization": "${{ secrets.AUTHKEY }}"}'
         data: ${{ toJson(github.event.issue) }}
+    # ${{ steps.myRequest.outputs.response }}
+    
+    - name: Add comment
+      uses: peter-evans/create-or-update-comment@5f728c3dae25f329afbe34ee4d08eef25569d79f
+      with:
+        issue-number: ${{ github.event.issue.number }}
+        body: ${{ steps.request.outputs.response.response }}
