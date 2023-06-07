@@ -5,15 +5,15 @@ labels: ["register domain"]
 assignees:
   - proudparrot2
 body:
+
   - type: markdown
     attributes:
       value: |
-        Please enter your chosen domain as the issue's title, after "[DOMAIN]".
+        "If you don't know what to put here or you don't know what you're doing, please **don't** submit this. Instead, go back to the issue creator and select the "Question" issue template.
   - type: dropdown
     id: domain
     attributes:
-      label: Domain
-      description: What domain do you want to use?
+      label: Select your domain
       options:
         - isreallycool.lol 
         - mathlearning.tech 
@@ -26,6 +26,14 @@ body:
         - msg.boats
     validations:
       required: true
+      
+  - type: input
+    id: name
+    attributes:
+      label: Enter your subdomain
+    validations:
+      required: true
+      
   - type: dropdown
     id: record
     attributes:
@@ -42,17 +50,8 @@ body:
     id: value
     attributes:
       label: Record value
-      description: What's the record's value?
+      description: Enter the record
       placeholder: ex. google.com
-    validations:
-      required: true
-      
-  - type: input
-    id: name
-    attributes:
-      label: Record name
-      description: What's the record's name? This is what the subdomain will be.
-      placeholder: ex. myfirstproject will be myfirstproject.domain.com
     validations:
       required: true
 
@@ -60,7 +59,7 @@ body:
     id: proxied
     attributes:
       label: Cloudflare Proxy
-      description: Do you want your DNS record to be proxied by Cloudflare?
+      description: Check this box if you want your domain to be proxied by Cloudflare
       options:
         - label: "Yes"
           required: false
@@ -69,9 +68,9 @@ body:
     id: agree
     attributes:
       label: Code of Conduct
-      description: By submitting this record, you agree to our [Registry agreements](https://github.com/sparkdns/registry/blob/main/AGREEMENTS.md)
+      description: By submitting this, you agree to our [Registry agreements](https://github.com/sparkdns/registry/blob/main/AGREEMENTS.md)
       options:
-        - label: I agree to follow the Registry agreements
+        - label: I agree to the Registry agreements
           required: true
           
   
