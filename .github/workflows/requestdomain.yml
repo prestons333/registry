@@ -9,7 +9,7 @@ jobs:
     if: github.event.label.name == 'add domain'
     runs-on: ubuntu-latest
     steps:
-    - name: Deploy Stage
+    - name: Request Domain
       id: request
       uses: fjogeleit/http-request-action@v1
       with:
@@ -25,4 +25,4 @@ jobs:
       with:
         issue-number: ${{ github.event.issue.number }}
         body: |
-          ${{ steps.request.outputs.response.response}}
+          ${{ steps.request.outputs.response}}
