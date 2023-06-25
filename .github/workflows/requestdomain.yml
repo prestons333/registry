@@ -20,9 +20,9 @@ jobs:
         data: ${{ toJson(github.event.issue) }}
     # ${{ steps.myRequest.outputs.response }}
     
-    #- name: Add comment
-    #  uses: peter-evans/create-or-update-comment@5f728c3dae25f329afbe34ee4d08eef25569d79f
-    #  with:
-    #    issue-number: ${{ github.event.issue.number }}
-    #    body: |
-    #      Response: ${{ steps.request.outputs.response}}
+    - name: Add comment
+      uses: peter-evans/create-or-update-comment@5f728c3dae25f329afbe34ee4d08eef25569d79f
+      with:
+        issue-number: ${{ github.event.issue.number }}
+        body: |
+          Response: ${{ fromJson(steps.request.outputs.response).message }}
