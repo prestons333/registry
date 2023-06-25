@@ -25,4 +25,4 @@ jobs:
       with:
         issue-number: ${{ github.event.issue.number }}
         body: |
-          Response: ${{ fromJson(steps.request.outputs.response).message }}
+          Response: ${{ steps.request.outputs.response.message }}
