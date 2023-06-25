@@ -1,1 +1,72 @@
+name: Register a domain
+description: Register a new subdomain
+title: "[DOMAIN]: "
+assignees:
+  - proudparrot2
+body:
 
+  - type: markdown
+    attributes:
+      value: |
+        "If you don't know what to put here or you don't know what you're doing, please **don't** submit this. Instead, go back [here](https://github.com/sparkdns/registry/issues/new/choose) and select the `Question` issue template.
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Select your domain
+      options:
+        - isreallycool.lol 
+        - mathlearning.tech 
+        - sorinsurance.org 
+        - artclass.site
+        - hotglue.click
+        - englishpapers.online
+        - ixl.plus
+        - sciencesimplified.pro
+        - msg.boats
+    validations:
+      required: true
+      
+  - type: input
+    id: name
+    attributes:
+      label: Enter your subdomain
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: type
+    attributes:
+      label: Record type
+      options:
+        - A 
+        - CNAME 
+        - TXT 
+    validations:
+      required: true
+
+  - type: input
+    id: content
+    attributes:
+      label: Record content
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: proxied
+    attributes:
+      label: Cloudflare Proxy
+      description: Check this box if you want your domain to be proxied by Cloudflare
+      options:
+        - label: "Yes"
+          required: false
+
+  - type: checkboxes
+    id: agree
+    attributes:
+      label: Registry Agreement
+      description: By submitting this, you agree to our [Registry agreements](https://github.com/sparkdns/registry/blob/main/AGREEMENTS.md)
+      options:
+        - label: I agree to the Registry agreements
+          required: true
+          
+  
