@@ -13,16 +13,16 @@ jobs:
       id: request
       uses: fjogeleit/http-request-action@v1
       with:
-        url: 'https://sparkdns-api.parrotdev.repl.co/requestdomain'
+        url: 'https://sparkdns-api-157d617a.up.railway.app/request'
         method: 'POST'
         bearerToken: '${{ secrets.AUTHKEY }}'
         customHeaders: '{"Content-Type": "application/json"}'
         data: ${{ toJson(github.event.issue) }}
     # ${{ steps.myRequest.outputs.response }}
     
-    - name: Add comment
-      uses: peter-evans/create-or-update-comment@5f728c3dae25f329afbe34ee4d08eef25569d79f
-      with:
-        issue-number: ${{ github.event.issue.number }}
-        body: |
-          Response: ${{ steps.request.outputs.response.message }}
+    #- name: Add comment
+    #  uses: peter-evans/create-or-update-comment@5f728c3dae25f329afbe34ee4d08eef25569d79f
+    #  with:
+    #    issue-number: ${{ github.event.issue.number }}
+    #    body: |
+    #      Response: ${{ steps.request.outputs.response.message }}
