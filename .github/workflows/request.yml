@@ -13,7 +13,7 @@ jobs:
       id: request
       uses: fjogeleit/http-request-action@v1
       with:
-        url: 'https://sparkdns-api-157d617a.up.railway.app/request'
+        url: 'https://api.sparkdns.io/request'
         method: 'POST'
         bearerToken: '${{ secrets.AUTHKEY }}'
         customHeaders: '{"Content-Type": "application/json"}'
