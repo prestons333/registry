@@ -1,6 +1,6 @@
 name: Register a domain
 description: Register a new subdomain
-title: "[DOMAIN]: "
+title: "<ENTER YOUR DOMAIN HERE>"
 assignees:
   - proudparrot2
 body:
@@ -8,7 +8,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        "If you don't know what to put here or you don't know what you're doing, please **don't** submit this. Instead, go back [here](https://github.com/sparkdns/registry/issues/new/choose) and select the `Question` issue template.
+        "If you don't know what to put here or you don't know what you're doing, please **don't** submit this. Instead, go back [here](https://github.com/sparkdns/registry/issues/new/choose) and select the `Question` issue template.\nPlease replace "<ENTER YOUR DOMAIN HERE>" with your chosen subdomain, such as "mydomain.artclass.site".
   - type: dropdown
     id: domain
     attributes:
