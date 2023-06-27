@@ -9,7 +9,7 @@ body:
     attributes:
       value: |
         "If you don't know what to put here or you don't know what you're doing, please **don't** submit this. Instead, go back [here](https://github.com/sparkdns/registry/issues/new/choose) and select the `Question` issue template.
-        To make it easier to manage, replace "<ENTER YOUR DOMAIN HERE>" with your chosen subdomain, such as "mydomain.artclass.site".
+        To make it easier to manage, replace `<ENTER YOUR DOMAIN HERE>` with your chosen subdomain, such as "mydomain.artclass.site".
   - type: dropdown
     id: domain
     attributes:
